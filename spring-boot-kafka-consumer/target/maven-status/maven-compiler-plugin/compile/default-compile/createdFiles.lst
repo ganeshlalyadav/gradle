@@ -1,0 +1,3 @@
+com\ms\springkafka\Application.class
+com\ms\springkafka\listener\KafkaConsumerListener.class
+com\ms\springkafka\config\KafkaConsumerConfig.class

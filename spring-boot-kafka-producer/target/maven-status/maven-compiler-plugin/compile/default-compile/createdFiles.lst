@@ -1,0 +1,4 @@
+com\ms\springkafka\Application.class
+com\ms\springkafka\controller\ProducerController.class
+com\ms\springkafka\service\ProducerService.class
+com\ms\springkafka\config\KafkaProducerConfig.class
