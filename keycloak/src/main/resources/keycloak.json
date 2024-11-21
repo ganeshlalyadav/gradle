@@ -1,8 +1,15 @@
 {
   "realm": "myrealm",
-  "auth-server-url": "http://localhost:8180",
-  "ssl-required": "none",
+  "auth-server-url": "http://localhost:8180/realms/myrealm/protocol/openid-connect/auth",
   "resource": "jakarta-app",
+  "redirect_uri":"http://localhost:8080/*",
   "public-client": true,
-  "confidential-port": 0
+ " response_type": "code",
+ " scope":"openid",
+  "bearer-only": true,
+  "credentials": {
+    "secret": "ayF8b0vXeTp1XSJ3215bCHOKazkPettF"
+  }
 }
+
+

@@ -1,0 +1,33 @@
+<!--
+<security-realms>
+    <security-realm name="KeycloakRealm">
+        <authentication>
+            <http-authentication>
+                <form login-page="/login.html" error-page="/login-error.html"/>
+            </http-authentication>
+        </authentication>
+        <server-identities>
+            <ssl>
+                <keystore path="application.keystore" password="secret"/>
+            </ssl>
+        </server-identities>
+    </security-realm>
+</security-realms>
+<subsystem xmlns="urn:jboss:domain:elytron:1.0">
+<http-authentication-factory name="HttpAuthFactory" security-domain="KeycloakRealm"/>
+&lt;!&ndash; Other Elytron configurations &ndash;&gt;
+</subsystem>
+<subsystem xmlns="urn:wildfly:elytron-http:1.0">
+<oidc-client name="my-oidc-client" client-id="your-client-id" client-secret="your-client-secret">
+    <auth-server-url>http://localhost:8180/realms/myrealm/protocol/openid-connect/auth</auth-server-url>
+    <principal-attribute>preferred_username</principal-attribute>
+</oidc-client>
+<http-authentication-factory name="oidc-authentication" security-domain="application-domain">
+    <mechanism-config mechanism-name="OIDC" />
+</http-authentication-factory>
+</subsystem>
+
+<security-domain name="application-domain" default-realm="ApplicationRealm">
+<realm name="ApplicationRealm" />
+</security-domain>
+-->
